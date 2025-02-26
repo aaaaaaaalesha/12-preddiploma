@@ -1,0 +1,66 @@
+\documentclass[practice]{BMSTU-IU8}
+
+\usepackage{
+    listingsutf8,
+    pdfpages,
+    tikz,
+    pgf-umlcd,
+    mathtools,
+    braket,
+    % Ажурные символы.
+    amsfonts
+}
+\usetikzlibrary{trees,positioning}
+
+\student{А.Н. Александров}
+\theme{Разработка средства обнаружения аномалий сетевых пакетов на основе машинного обучения}
+\group{ИУ8-124}
+\supervisor{Н.С. Коннова}
+\studentFullName{Александров Алексей Николаевич}
+\profile{19У113}
+\speciality{10.05.01 <<Компьютерная безопасность>>}
+\specialization{10.05.01\_01 <<Математические методы защиты информации>>}
+\supervisorWithDegree{к.т.н., доцент кафедры ИУ8, Коннова Н.С.}
+
+% redundant, yet required variable definitions
+\researchConsultant{}
+\designConsultant{}
+\technologicalConsultant{}
+\economicsConsultant{}
+\lawsConsultant{}
+\normController{}
+
+\addbibresource{main.bib}
+
+
+\usepackage{}
+
+\begin{document}
+    \IfFileExists{inc/titul.pdf}
+    {\includepdf[pages=-]{inc/titul}}
+    {\maketitle}
+    \setcounter{page}{3}
+
+    \include{contents/abstract}
+    \tableofcontents
+
+    \include{contents/introduction}
+
+    \include{contents/01-org-characteristics/01-abstract}
+    \include{contents/01-org-characteristics/02-org-characteristics}
+
+    \include{contents/02-math-formulation/01-abstract}
+
+    \include{contents/03-solve-ways/01-abstract}
+    \include{contents/03-solve-ways/02-three-sigma}
+    \include{contents/03-solve-ways/03-one-class-svm}
+    \include{contents/03-solve-ways/04-iforest}
+    \include{contents/03-solve-ways/05-ecod}
+    \include{contents/03-solve-ways/06-autoencoder}
+
+    \include{contents/04-solution-justification/01-abstract}
+
+    \include{contents/conclusion}
+
+    \printbibliography
+\end{document}

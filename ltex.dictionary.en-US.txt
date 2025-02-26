@@ -1,0 +1,10 @@
+IForest
+ITree
+outlier
+ECOD
+Empirical
+Cumulative
+ECDF
+CDF
+One-Class
+SVM
