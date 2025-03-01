@@ -1,4 +1,4 @@
-\documentclass[practice]{BMSTU-IU8}
+\documentclass[research]{BMSTU-IU8}
 
 \usepackage{
     listingsutf8,
@@ -32,8 +32,26 @@
 
 \addbibresource{main.bib}
 
-
 \usepackage{}
+
+\defbibenvironment{nirs-bibliography}
+  {\list
+     {\printfield{labelnumber}}
+     {\setlength{\leftmargin}{0pt} % устанавливаем отступ слева
+      \setlength{\itemindent}{4.0em} % устанавливаем отступ для номера
+      \setlength{\parsep}{\parskip}}
+     \renewcommand*{\makelabel}[1]{\hss##1}}
+  {\endlist}
+  {\item}
+
+\makeatletter
+% +10mm ко всем сдвигам
+\renewcommand*\l@section{\@dottedtocline{0}{10mm}{2em}}
+\renewcommand*\l@structure{\@dottedtocline{0}{10mm}{0em}}
+\renewcommand*\l@subsection{\@dottedtocline{1}{15mm}{3em}}
+\renewcommand*\l@subsubsection{\@dottedtocline{2}{20mm}{4em}}
+\renewcommand*\l@paragraph{\@dottedtocline{3}{25mm}{5em}}
+\makeatother
 
 \begin{document}
     \IfFileExists{inc/titul.pdf}
@@ -41,7 +59,6 @@
     {\maketitle}
     \setcounter{page}{3}
 
-    \include{contents/abstract}
     \tableofcontents
 
     \include{contents/introduction}
@@ -62,5 +79,5 @@
 
     \include{contents/conclusion}
 
-    \printbibliography
+    \printbibliography[env=nirs-bibliography]
 \end{document}
