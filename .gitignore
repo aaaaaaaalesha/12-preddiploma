@@ -480,6 +480,6 @@ tags
 # End of https://www.toptal.com/developers/gitignore/api/vim,tex,latex
 
 main.glo-abr
-main.pdf
+build/main.pdf
 *.bbl-SAVE-ERROR
 *.bcf-SAVE-ERROR
